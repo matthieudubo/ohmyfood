@@ -1,0 +1,31 @@
+.footer {
+  background-color: $darkGray;
+  padding: 2rem 1rem;
+  font-family: $fontText, Arial, Helvetica, sans-serif;
+
+  &__logo {
+    font-family: $fontTitleLogo;
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__icon {
+    color: white;
+    margin-right: 1rem;
+    width: 10px;
+
+    &--rotate {
+      transform: rotate(-45deg);
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__link {
+    padding: 0.3rem 0;
+  }
+}
