@@ -7,3 +7,14 @@
 ul li {
   list-style: none;
 }
+
+.btn {
+  font-family: $fontText, Arial, Helvetica, sans-serif;
+  padding: 1rem 0;
+  color: white;
+  background: linear-gradient(to top left, $primaryColor, $secondaryColor);
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  width: 13rem;
+}
