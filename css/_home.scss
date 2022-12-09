@@ -30,16 +30,6 @@
     font-weight: 300;
     color: $darkGray;
   }
-
-  &__btn {
-    font-family: $fontText, Arial, Helvetica, sans-serif;
-    padding: 1rem 1.3rem;
-    color: white;
-    background: linear-gradient(to top left, $primaryColor, $secondaryColor);
-    border: none;
-    border-radius: 2rem;
-    font-size: 1rem;
-  }
 }
 
 .functionning {
