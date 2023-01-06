@@ -27,6 +27,75 @@ a {
   width: 13rem;
 }
 
+.loader {
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  z-index: 1000;
+  -webkit-animation: animationOut 0.3s forwards;
+          animation: animationOut 0.3s forwards;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+
+.loader__dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 0 15px;
+  -webkit-animation: loader infinite 0.3s alternate;
+          animation: loader infinite 0.3s alternate;
+}
+
+.loader .d2 {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.loader .d3 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+@-webkit-keyframes loader {
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes loader {
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@-webkit-keyframes animationOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animationOut {
+  100% {
+    opacity: 0;
+  }
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,6 +172,16 @@ a {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (min-width: 992px) {
+  .functionning__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .functionning__step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +197,12 @@ a {
           box-shadow: 0px 5px 26px -10px rgba(0, 0, 0, 0.5);
   position: relative;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .functionning__step {
+    padding: 1.5rem;
+  }
 }
 
 .functionning__step__icon {
@@ -157,6 +242,18 @@ a {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+@media screen and (min-width: 992px) {
+  .restaurants__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .restaurants__card {
   margin: 1.5rem 0;
   background-color: white;
@@ -166,6 +263,14 @@ a {
           box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.3);
   position: relative;
   height: 200px;
+}
+
+@media screen and (min-width: 992px) {
+  .restaurants__card {
+    height: 250px;
+    width: 300px;
+    margin-right: 1.5rem;
+  }
 }
 
 .restaurants__card__img {
@@ -214,11 +319,48 @@ a {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+@media screen and (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .footer__logo {
   font-family: "Shrikhand";
   color: white;
   font-size: 1.3rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .footer__logo {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
 }
 
 .footer__icon {
@@ -255,7 +397,7 @@ a {
 .meals {
   padding: 2rem 1rem;
   position: relative;
-  top: -2rem;
+  margin-top: -2rem;
   border-radius: 2rem 2rem 0 0;
   overflow: hidden;
   width: 100%;
@@ -278,12 +420,40 @@ a {
   padding-right: 1rem;
 }
 
+@media screen and (min-width: 992px) {
+  .meals__title {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 2rem 0;
+  }
+}
+
 .meals__title h1 {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 992px) {
+  .meals__title h1 {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .meals__title i {
+    font-size: 2rem;
+  }
+}
+
 .meals__foods {
   margin-bottom: 2rem;
+  opacity: 0;
+  -webkit-animation: fadein 2s forwards;
+          animation: fadein 2s forwards;
 }
 
 .meals__foods__title h2 {
@@ -292,12 +462,31 @@ a {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 992px) {
+  .meals__foods__title h2 {
+    font-size: 1.25rem;
+  }
+}
+
 .meals__foods__title--underline {
   height: 3px;
   width: 2.5rem;
   background-color: #99e2d0;
   margin-top: 0.3rem;
   margin-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 992px) {
+  .meals__foods__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .meals__foods__card {
@@ -316,9 +505,44 @@ a {
   cursor: pointer;
 }
 
+@media screen and (min-width: 992px) {
+  .meals__foods__card {
+    width: 30%;
+  }
+}
+
+.meals__foods__card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .meals__foods__card__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .meals__foods__card--left {
   padding: 0.8rem 0 0.8rem 0.5rem;
   width: 80%;
+}
+
+@media screen and (min-width: 992px) {
+  .meals__foods__card--left {
+    text-align: center;
+    padding: 0.8rem 0rem;
+  }
 }
 
 .meals__foods__card--left h3 {
@@ -346,6 +570,18 @@ a {
   font-weight: 400;
   padding: 0.8rem 1rem 0.8rem 0;
   width: 20%;
+}
+
+@media screen and (min-width: 992px) {
+  .meals__foods__card--right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.8rem 0rem;
+  }
 }
 
 .meals__foods__card--checked {
@@ -386,5 +622,27 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.anim2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.anim3 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
