@@ -3,11 +3,33 @@
   padding: 2rem 1rem;
   font-family: $fontText, Arial, Helvetica, sans-serif;
 
+  @media screen and (min-width: $screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__logo {
     font-family: $fontTitleLogo;
     color: white;
     font-size: 1.3rem;
     margin-bottom: 1rem;
+
+    @media screen and (min-width: $screen) {
+      font-size: 1.75rem;
+    }
+  }
+
+  ul {
+    @media screen and (min-width: $screen) {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    li:hover {
+      text-decoration: underline;
+    }
   }
 
   &__icon {

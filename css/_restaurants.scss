@@ -10,7 +10,7 @@
 .meals {
   padding: 2rem 1rem;
   position: relative;
-  top: -2rem;
+  margin-top: -2rem;
   border-radius: 2rem 2rem 0 0;
   overflow: hidden;
   width: 100%;
@@ -25,19 +25,43 @@
     margin-bottom: 1.5rem;
     padding-right: 1rem;
 
+    @media screen and (min-width: $screen) {
+      justify-content: flex-end;
+      margin: 2rem 0;
+    }
+
     h1 {
       font-size: 1.5rem;
+
+      @media screen and (min-width: $screen) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+      }
+    }
+
+    i {
+      @media screen and (min-width: $screen) {
+        font-size: 2rem;
+      }
     }
   }
 
   &__foods {
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadein 2s forwards;
 
     &__title {
       h2 {
         font-weight: 200;
         text-transform: uppercase;
         font-size: 1rem;
+
+        @media screen and (min-width: $screen) {
+          font-size: 1.25rem;
+        }
       }
 
       &--underline {
@@ -46,6 +70,14 @@
         background-color: $tertiaryColor;
         margin-top: 0.3rem;
         margin-bottom: 0.8rem;
+      }
+    }
+
+    &__cards {
+      @media screen and (min-width: $screen) {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
       }
     }
 
@@ -59,9 +91,29 @@
       overflow: hidden;
       cursor: pointer;
 
+      @media screen and (min-width: $screen) {
+        width: 30%;
+      }
+
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media screen and (min-width: $screen) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
       &--left {
         padding: 0.8rem 0 0.8rem 0.5rem;
         width: 80%;
+
+        @media screen and (min-width: $screen) {
+          text-align: center;
+          padding: 0.8rem 0rem;
+        }
 
         h3 {
           font-weight: 400;
@@ -83,6 +135,12 @@
         font-weight: 400;
         padding: 0.8rem 1rem 0.8rem 0;
         width: 20%;
+
+        @media screen and (min-width: $screen) {
+          align-items: center;
+          justify-content: center;
+          padding: 0.8rem 0rem;
+        }
       }
 
       &--checked {
@@ -113,5 +171,19 @@
   &__btn {
     display: flex;
     justify-content: center;
+  }
+}
+
+.anim2 {
+  animation-delay: 1s;
+}
+
+.anim3 {
+  animation-delay: 2s;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
   }
 }
