@@ -87,12 +87,14 @@ a {
 @-webkit-keyframes animationOut {
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
 @keyframes animationOut {
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -302,6 +304,40 @@ a {
   font-weight: 200;
 }
 
+.restaurants__card__content--icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 50;
+  cursor: pointer;
+  position: relative;
+}
+
+.restaurants__card__content--icon svg {
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+}
+
+.restaurants__card__content--icon path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.restaurants__card__content--icon .heart-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+
+.restaurants__card__content--icon .heart-main:hover path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+
 .restaurants__card__new {
   background-color: #99e2d0;
   position: absolute;
@@ -311,6 +347,64 @@ a {
   font-size: 0.9rem;
   border-radius: 5px;
   color: #3a8568;
+}
+
+@-webkit-keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    fill: #9356dc;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: #9356dc;
+    stroke: #9356dc;
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    fill: #9356dc;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: #9356dc;
+    stroke: #9356dc;
+  }
 }
 
 .footer {
