@@ -622,6 +622,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 @media screen and (min-width: 992px) {
@@ -652,11 +654,17 @@ a {
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .meals__foods__card--left p {
   font-weight: 200;
   font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .meals__foods__card--right {
@@ -716,6 +724,10 @@ a {
 .meals__foods__card:hover .meals__foods__card--checked i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+.meals__foods__card:hover .meals__foods__card__content {
+  width: 80%;
 }
 
 .meals__btn {

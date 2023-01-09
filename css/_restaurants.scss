@@ -98,6 +98,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        transition: 400ms;
 
         @media screen and (min-width: $screen) {
           flex-direction: column;
@@ -118,11 +119,17 @@
           font-weight: 400;
           font-size: 1rem;
           margin-bottom: 0.2rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         p {
           font-weight: 200;
           font-size: 0.8rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
 
@@ -163,6 +170,10 @@
           i {
             transform: rotate(360deg);
           }
+        }
+
+        .meals__foods__card__content {
+          width: 80%;
         }
       }
     }
