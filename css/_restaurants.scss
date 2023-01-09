@@ -23,11 +23,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
-    padding-right: 1rem;
 
     @media screen and (min-width: $screen) {
       justify-content: flex-end;
       margin: 2rem 0;
+      padding-right: 1rem;
     }
 
     h1 {
@@ -41,9 +41,13 @@
       }
     }
 
-    i {
-      @media screen and (min-width: $screen) {
-        font-size: 2rem;
+    svg {
+      height: 20px;
+      width: 20px;
+
+      @media screen and (min-width: $tablette) {
+        height: 32px;
+        width: 32px;
       }
     }
   }
@@ -99,6 +103,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        transition: 400ms;
 
         @media screen and (min-width: $screen) {
           flex-direction: column;
@@ -119,11 +124,17 @@
           font-weight: 400;
           font-size: 1rem;
           margin-bottom: 0.2rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         p {
           font-weight: 200;
           font-size: 0.8rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
 
@@ -164,6 +175,10 @@
           i {
             transform: rotate(360deg);
           }
+        }
+
+        .meals__foods__card__content {
+          width: 80%;
         }
       }
     }
