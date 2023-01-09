@@ -41,10 +41,9 @@
       }
     }
 
-    i {
-      @media screen and (min-width: $screen) {
-        font-size: 2rem;
-      }
+    svg {
+      height: 32px;
+      width: 32px;
     }
   }
 

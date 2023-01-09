@@ -546,10 +546,9 @@ a {
   }
 }
 
-@media screen and (min-width: 992px) {
-  .meals__title i {
-    font-size: 2rem;
-  }
+.meals__title svg {
+  height: 32px;
+  width: 32px;
 }
 
 .meals__foods {
