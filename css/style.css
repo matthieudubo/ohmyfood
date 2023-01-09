@@ -521,7 +521,6 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 1.5rem;
-  padding-right: 1rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -530,6 +529,7 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin: 2rem 0;
+    padding-right: 1rem;
   }
 }
 
@@ -548,8 +548,15 @@ a {
 }
 
 .meals__title svg {
-  height: 32px;
-  width: 32px;
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .meals__title svg {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .meals__foods {
