@@ -463,7 +463,7 @@ a {
   }
 }
 
-.footer ul li:hover {
+.footer ul li:hover a {
   text-decoration: underline;
 }
 
