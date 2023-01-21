@@ -284,7 +284,14 @@ a {
     height: 250px;
     width: 300px;
     margin-right: 1.5rem;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
   }
+}
+
+.restaurants__card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .restaurants__card__img {

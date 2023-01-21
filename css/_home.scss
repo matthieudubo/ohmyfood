@@ -113,6 +113,11 @@
       height: 250px;
       width: 300px;
       margin-right: 1.5rem;
+      transition: all 300ms;
+    }
+
+    &:hover {
+      transform: scale(1.02);
     }
 
     &__img {
